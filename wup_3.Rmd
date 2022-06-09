@@ -60,16 +60,26 @@ basicCN + geom_boxplot(notch=TRUE,outlier.color = "red") + stat_boxplot(geom ='e
 The results from the fancy box plot and the regular box plot are fairly similar. 
 The back row still drinks the most. 
 
-## Numerical Summarys 
+## Numerical Descriptive Results
 
 ```{r}
 favstats(alcohol~Seat,data=davisdata)
 ```
 The back seat has a median of 4: much greater than the other 2. The maximum for the back is 55. That's 35 more than the front and 20 more than the back. The overall average for the back is 9.6. Much higher than the other two seats. From this data, the back seat significantly drinks the most alcohol out of all 3 seats. Since the median, max, and mean are all greater than the other 2 seats. 
 
-## Inferential Tests
+## Inferential Results
+
+```{r}
+model1 <- aov(alcohol~Seat,data=davisdata)
+summary.aov(model1)
+```
+We can infer that the P-value is .000116. From the T table, we can reject the 
+null hypothesis due to how small the p-value is. If the p-value is not.05 or higher, we can reject it due to how small the chances are. In every problem, we
+know we're accurate when we can reject the null hypothesis. In this case, we did. 
+There is a difference between how much alcohol is consumed in every seat. 
 
 ## Conclusion 
+
 
 
 
