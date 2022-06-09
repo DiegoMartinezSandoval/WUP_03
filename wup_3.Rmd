@@ -58,7 +58,7 @@ basicCN + geom_boxplot(notch=TRUE,outlier.color = "red") + stat_boxplot(geom ='e
 ```
 
 The results from the fancy box plot and the regular box plot are fairly similar. 
-The back row still drinks the most. 
+The back row still drinks the most by far. The amount of outliers, median range, and mean all stayed the same.
 
 ## Numerical Descriptive Results
 
@@ -80,6 +80,7 @@ There is a difference between how much alcohol is consumed in every seat.
 
 ## Conclusion 
 
+The seat category and amount of alcohol consumed is different. The back seat median, max, and mean are all greater than the other 2 seats. The median is different by at least 3. The mean is different by at least 6.4. The max is different by at least 35. We rejected the null hypothesis after seeing the results of the T-test. There is clearly a difference. People in the back seat drink the most, people in the middle seat drink the 2nd most, and people in the front seat drink the least.
 
 
 
