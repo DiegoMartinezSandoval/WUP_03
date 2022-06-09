@@ -16,12 +16,22 @@ davisdata <- read.csv(file="UCDavis.csv")
 ```
 
 ## Introduction: 
+Our goal is to answer the following questions. Examining if the row of seats
+you sit in, determines the amount of alcohol you consume. 
 
-# Our goal is to answer this question: Is there a difference between the alcohol consumed between the row  you choose to sit in?
+## Is there a difference between the alcohol consumed between the row  you choose to sit in?
 
 $H_0$: There is no difference between which row you sit in and the amount of alcohol consumed. There is no relationship between the two.   
 $H_A$ There is a difference between which row you sit in and the amount of 
 alcohol is consumed based off of the cultivation method (data table)  
+
+
+## Methods 
+
+We are examining the amount of alcohol consumed (numerical) by examining the
+3 different types of seats: front, middle, and back(categorical). We'll be using
+a T-test to compare alcohol consumption in 3 groups. 
+
 
 ## Now with ggplot - first select the basic data
 
@@ -33,13 +43,16 @@ basicCN <- ggplot(davisdata,aes(y=alcohol,x=Seat))
 ```{r}
 basicCN + geom_boxplot()
 ```
-  
-  
+
+
+
 ### get fancy  
 
 ```{r}
 basicCN + geom_boxplot(notch=TRUE,outlier.color = "red") + stat_boxplot(geom ='errorbar') + labs(title="Fancy notch boxplot \n with 2 lines")
 ```
+
+
 
 ## Numerical Summarys 
 
