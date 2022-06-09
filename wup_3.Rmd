@@ -44,7 +44,12 @@ basicCN <- ggplot(davisdata,aes(y=alcohol,x=Seat))
 basicCN + geom_boxplot()
 ```
 
-
+The amount of alcohol drank per row (according to the box plot) is significantly 
+different. As we can see, the median for the back row is higher than the total
+amount of alcohol drank in the front row and middle row. There was few alcohol 
+drank in the front and middle row. Although, the middle row did drink more. The 
+middle row had the most outliers but it's still no where compared to the back 
+row. The back row has 2 outliers that drank significantly anove the median. 
 
 ### get fancy  
 
@@ -52,9 +57,15 @@ basicCN + geom_boxplot()
 basicCN + geom_boxplot(notch=TRUE,outlier.color = "red") + stat_boxplot(geom ='errorbar') + labs(title="Fancy notch boxplot \n with 2 lines")
 ```
 
-
+The results from the fancy box plot and the regular box plot are fairly similar. 
+The back row still drinks the most. 
 
 ## Numerical Summarys 
+
+```{r}
+favstats(alcohol~Seat,data=davisdata)
+```
+The back seat has a median of 4: much greater than the other 2. The maximum for the back is 55. That's 35 more than the front and 20 more than the back. The overall average for the back is 9.6. Much higher than the other two seats. From this data, the back seat significantly drinks the most alcohol out of all 3 seats. Since the median, max, and mean are all greater than the other 2 seats. 
 
 ## Inferential Tests
 
