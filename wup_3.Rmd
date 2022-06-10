@@ -73,14 +73,14 @@ The back seat has a median of 4: much greater than the other 2. The maximum for 
 model1 <- aov(alcohol~Seat,data=davisdata)
 summary.aov(model1)
 ```
-We can infer that the P-value is .000116. From the T table, we can reject the 
+We can infer that the P-value is .000116. From the AOV, we can reject the 
 null hypothesis due to how small the p-value is. If the p-value is not.05 or higher, we can reject it due to how small the chances are. In every problem, we
 know we're accurate when we can reject the null hypothesis. In this case, we did. 
 There is a difference between how much alcohol is consumed in every seat. 
 
 ## Conclusion 
 
-The seat category and amount of alcohol consumed is different. The back seat median, max, and mean are all greater than the other 2 seats. The median is different by at least 3. The mean is different by at least 6.4. The max is different by at least 35. We rejected the null hypothesis after seeing the results of the T-test. There is clearly a difference. People in the back seat drink the most, people in the middle seat drink the 2nd most, and people in the front seat drink the least.
+The seat category and amount of alcohol consumed is different. The back seat median, max, and mean are all greater than the other 2 seats. The median is different by at least 3. The mean is different by at least 6.4. The max is different by at least 35. We rejected the null hypothesis after seeing the results of the AOV. There is clearly a difference. People in the back seat drink the most, people in the middle seat drink the 2nd most, and people in the front seat drink the least.
 
 
 
