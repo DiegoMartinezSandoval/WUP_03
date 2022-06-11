@@ -78,9 +78,16 @@ null hypothesis due to how small the p-value is. If the p-value is not.05 or hig
 know we're accurate when we can reject the null hypothesis. In this case, we did. 
 There is a difference between how much alcohol is consumed in every seat. 
 
+```{r}
+#we specify the margins starting at the bottom and proceeding clockwise - thus 8.7 is the left side margin to hold the names of the factors
+par(mar = c(3, 15, 2, 2))
+plot(TukeyHSD(model1),las=2)
+```
+
+There is clearly a difference. The familiies confidence level doesn't even reach 0 for (Front-Back) and (Middle-Back). The clear winner for the tukey HSD test is the (Middle-Front). Since its range goes from -2.5 to over 5. In second place, is 
+the (Middle-Back). Its range is he second closest to reaching 0. 
+
 ## Conclusion 
 
 The seat category and amount of alcohol consumed is different. The back seat median, max, and mean are all greater than the other 2 seats. The median is different by at least 3. The mean is different by at least 6.4. The max is different by at least 35. We rejected the null hypothesis after seeing the results of the AOV. There is clearly a difference. People in the back seat drink the most, people in the middle seat drink the 2nd most, and people in the front seat drink the least.
-
-
 
